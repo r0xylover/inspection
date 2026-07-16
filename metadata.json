@@ -1,0 +1,6 @@
+{
+  "name": "Ведомость Дефектов A3",
+  "description": "Интерактивный конструктор и редактор ведомостей дефектов по шаблону А3 с точным расчетом высоты строк, базой марок дефектов и интерактивным выбором осей.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

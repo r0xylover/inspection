@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer utilities {
+  /* Print overrides */
+  @media print {
+    @page {
+      size: A3 landscape;
+      margin: 0;
+    }
+    html, body {
+      width: 420mm;
+      height: 297mm;
+      background-color: #fff !important;
+      color: #000 !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .no-print {
+      display: none !important;
+    }
+    /* Neutralize zoom scaling on paper */
+    .origin-top {
+      transform: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      width: auto !important;
+      height: auto !important;
+    }
+    .a3-page {
+      width: 42cm !important;
+      height: 29.7cm !important;
+      max-width: 42cm !important;
+      max-height: 29.7cm !important;
+      margin: 0 !important;
+      padding-left: 2.0cm !important;
+      padding-right: 1.0cm !important;
+      padding-top: 1.2cm !important;
+      padding-bottom: 1.2cm !important;
+      border: none !important;
+      box-shadow: none !important;
+      page-break-after: always;
+      page-break-inside: avoid;
+      box-sizing: border-box !important;
+      display: flex !important;
+      flex-direction: column !important;
+      justify-content: space-between !important;
+    }
+  }
+}
+
